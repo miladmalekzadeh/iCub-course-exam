@@ -1,0 +1,36 @@
+<application>
+    <name>System</name>
+    
+    <module>
+        <name>iKinGazeCtrl</name>
+        <parameters>--from configSim.ini</parameters>
+        <node>localhost</node>
+    </module>
+ 
+    <module>
+        <name>simCartesianControl</name>
+        <parameters></parameters>
+        <node>localhost</node>
+        <prefix></prefix>
+    </module>
+
+    <module>
+        <name>iKinCartesianSolver</name>
+        <parameters>--context simCartesianControl --part right_arm</parameters>
+        <node>localhost</node>
+        <prefix></prefix>
+    </module>
+
+    <module>
+        <name>iKinCartesianSolver</name>
+        <parameters>--context simCartesianControl --part left_arm</parameters>
+        <node>localhost</node>
+        <prefix></prefix>
+    </module>
+
+</application>
+
+
+
+
+
